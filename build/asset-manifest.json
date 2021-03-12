@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ce9082c0.chunk.css",
+    "main.js": "/static/js/main.f4040e7f.chunk.js",
+    "main.js.map": "/static/js/main.f4040e7f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ae6163dd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ae6163dd.js.map",
+    "static/css/2.e5940d02.chunk.css": "/static/css/2.e5940d02.chunk.css",
+    "static/js/2.c344211b.chunk.js": "/static/js/2.c344211b.chunk.js",
+    "static/js/2.c344211b.chunk.js.map": "/static/js/2.c344211b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.e5940d02.chunk.css.map": "/static/css/2.e5940d02.chunk.css.map",
+    "static/css/main.ce9082c0.chunk.css.map": "/static/css/main.ce9082c0.chunk.css.map",
+    "static/js/2.c344211b.chunk.js.LICENSE.txt": "/static/js/2.c344211b.chunk.js.LICENSE.txt",
+    "static/media/newTshirt.5eb19a65.svg": "/static/media/newTshirt.5eb19a65.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ae6163dd.js",
+    "static/css/2.e5940d02.chunk.css",
+    "static/js/2.c344211b.chunk.js",
+    "static/css/main.ce9082c0.chunk.css",
+    "static/js/main.f4040e7f.chunk.js"
+  ]
+}
