@@ -1,38 +1,48 @@
 import React,{useRef,useState,useEffect} from 'react'
 import { TweenMax } from "gsap";
 import Tsh from "../images/newTshirt.svg"
-import Modal from '../Form/componenets/Modal';
-import { isAuthenticated } from '../Form/FormBackend';
-import SvgComp from './SvgComp';
+import Tsh2 from "../images/update.png"
+import Tsh3 from "../images/HomeBack.png"
+
+
+
 
 function Hero() {
     const move=useRef()
-    const [showModal, setShowModal] = useState(false);
+    const move2=useRef()
+    const move3=useRef()
+    const move4=useRef()
+    const move5=useRef()
+    const move6=useRef()
 
-  const openModal = () => {
-    setShowModal(prev => !prev);
-  };
+    
 
     useEffect(()=>{
-        setTimeout(()=>{
-                openModal()
-        },4000)
-      TweenMax.from(move.current, {duration: 2, y: 300, opacity: 0, scale: 0.5});
+       
+      TweenMax.from(move.current, {duration: 2, opacity: 0, scale: 0.5});
+       // TweenMax.to(move2.current,  {duration:10,rotation:"360",x:-800,y:50, ease:Linear.easeNone, repeat:-1});
     },[])
 
     return (
 
         <>
-        <div style={{backgroundColor:"#050B21"}} className=" h-screen flex flex-col md:flex-row-reverse ">
-            <img ref={move} className="h-64 mt-4 md:h-96"  src={Tsh} alt="data"/>
-          {/* <div className="absolute">
-        <Modal showModal={showModal} setShowModal={setShowModal} />
-
-            </div>
+        <div style={{backgroundColor:"#FFFFFF"}} className=" h-screen  flex flex-col justify-end items-end md:items-start md:flex-row-reverse ">
+       <div className="flex flex-wrap -mt-8 objext-conatin">
+       <img ref={move} className="absolute z-40 h-64 -ml-12 md:ml-8 p-4 mt-4 md:h-96 items-end"  src={Tsh} alt="data"/>   
+       
+       <img className="h-screen mt-4 w-full md:h-screen "  src={Tsh2} alt="data"/>
+       </div>
+         
+           {/* <img ref={move} className="h-48 mt-4 md:h-48 items-end"  src={Tsh} alt="data"/>
+            <div  className="h-64 my-auto mx-auto flex justify-center items-center ">
+    <h1 className="text-9
+    xl  md:text-9xl uppercase font-white text-white">EXPLORE</h1>
+</div> 
     */}
-           
-            
-        </div>  
+  
+      </div>         
+          
+
         
 </>
        

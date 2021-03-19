@@ -10,7 +10,7 @@ function Content() {
 const [categories,setCategories]=useState([])
 const getCategory=()=>{
     getCategories().then(data=>{
-        if(data.error){
+        if(data?.error){
                 console.log("eror")
         }
         setCategories(data)
@@ -29,7 +29,7 @@ return (
 <>    
 <div   className="  container bg-white  mx-auto px-4 md:px-12 rounded-lg ">
     <div class="flex flex-wrap -mx-1 lg:-mx-4 "> 
-   {categories.map((data,index)=>{
+   {!categories?(<div className="flex  justify-center items-center">Empty</div>):categories.map((data,index)=>{
       const name=data.name
        return(
         <div  key={index} class=" flex mt-4 flex-col justify-center items-center px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3  ">

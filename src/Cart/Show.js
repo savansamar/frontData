@@ -1,19 +1,35 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React ,{useState}from 'react'
+import { Link,Redirect } from 'react-router-dom'
 import Pics from './PicsBackend';
+import {addItemToCart} from "./CartHelper.js"
 
 const AllProducts=({product})=>{
     const cartTitle = product ? product.name : "A photo from pexels";
   const cartDescrption = product ? product.description : "Default description";
   const cartPrice = product ? product.price : "DEFAULT";
 
-    return (
+const [redirect,setRedirect]=useState(false)
+const [success,setSuccess]=useState(false)
 
 
 
+const  addToBag=(product)=>{
+addItemToCart(product,()=>{
+    setRedirect(true)
+    setSuccess(true)
+})
+}
+
+const performRedirect=()=>{
+return(
+  <Redirect to="/Cart" />
+)
+}
 
 
+return (
 <div   class=" flex flex-col  px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 mt-8 ">
+  {redirect&&performRedirect()}
        <Pics product={product} />
        <form class="flex-auto p-6">
           <div class="flex flex-wrap">
@@ -31,12 +47,19 @@ const AllProducts=({product})=>{
           <div class="flex space-x-3 mb-4 text-sm font-medium">
             <div class="flex-auto flex space-x-3">
               <button style={{backgroundColor:"#050B21"}} class="w-1/2 h-8 flex items-center justify-center rounded-md text-white" type="submit">Buy now</button>
-              <button class="w-1/2 flex items-center justify-center rounded-md border border-gray-300" type="button">Add to bag</button>
+             {!success?( <button onClick={()=>{
+                addToBag(product)
+              }} className="w-1/2 flex items-center justify-center rounded-md border border-gray-300" type="button">Add to bag</button>):
+              <button onClick={()=>{
+                addToBag(product)
+              }} className="w-1/2 flex items-center justify-center rounded-md border border-gray-300" type="button">Remove from Cart</button>
+              }
+            
             </div>
             
           </div>
           <p style={{color:"#050B21"}} class="text-sm ">
-            Free shipping on all continental US orders.
+            Don't took any charges for delivery.
           </p>
         </form>
         

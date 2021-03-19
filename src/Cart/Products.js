@@ -62,7 +62,8 @@ const filterData=(event)=>{
   </form>
   
     <div class="flex flex-wrap -mx-1 lg:-mx-4 "> 
-    
+    {/* filter prodict by fpproduct */}
+    {!products&&(<div  className="h-screen flex flex-row  justify-center items-center text-6xl text-black">Cart Empty...</div>)}
     {value&&fproduct?fproduct.map((data,index)=>{
        return(
         <AllProducts key={index} product={data} />
@@ -85,7 +86,3 @@ const filterData=(event)=>{
 
 export default Products
 
-/*
-
-
-*/

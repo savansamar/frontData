@@ -17,6 +17,7 @@ import Products from "./Cart/Products";
 import CategoryCart from "./Cart/CategroyCart";
 import UpdateProduct from "./AuthRoutes/UpdateProduct";
 import ManageProduct from "./AuthRoutes/ManageProduct";
+import Bag from "./Cart/Bag";
 
 const Routes = () => {
 
@@ -24,12 +25,7 @@ const Routes = () => {
   const toggle=()=>{
     setIsOpen(!isOpen)
   }
-
   
-
-  
-
-
   useEffect(()=>{
 
 
@@ -48,9 +44,9 @@ const Routes = () => {
     <>
     
     <BrowserRouter>
+    <DropDown isOpen={isOpen} toggle={toggle} />
   
     <NavBar toggle={toggle} />
-    <DropDown isOpen={isOpen} toggle={toggle} />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/About" exact component={About} />
@@ -58,6 +54,8 @@ const Routes = () => {
         <Route path="/Signup" exact component={SignUp} />
         <Route path="/Login" exact component={SignIn} />
         <Route path="/Cart" exact component={Products} />
+        <Route path="/Bag" exact component={Bag} />
+
         <Admin path="/Admin/Dashboard" exact component={AdminDashboard}  />
         <Admin path="/Admin/Create/Category"  component={AddCategory}  />
         <Admin path="/Admin/Create/Product"  component={AddProduct}  />

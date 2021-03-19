@@ -1,1 +1,1 @@
-export  const API="https://explorecart.herokuapp.com/api/"
+export  const API="https://explorecart.herokuapp.com/api"

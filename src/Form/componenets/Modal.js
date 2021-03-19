@@ -13,22 +13,6 @@ const Background = styled.div`
 `;
 
 
-
-
- 
-
-const CloseModalButton = styled(MdClose)`
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  z-index: 10;
-  
-`;
-
  const Modal = ({ showModal, setShowModal }) => {
   const modalRef = useRef();
   const move=useRef()
@@ -70,12 +54,7 @@ const CloseModalButton = styled(MdClose)`
              <FormSignup />
              
             </div>
-            <CloseModalButton
-              style={{background:"white"}}
-      className=" mb-16"
-                aria-label='Close modal'
-                onClick={() => setShowModal(prev => !prev)}
-              /> 
+            
           </div>
           
         </Background>

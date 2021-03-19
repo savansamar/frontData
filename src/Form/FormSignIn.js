@@ -75,11 +75,11 @@ const FormSignIn = () => {
     {success&&successMessage()}
     {error&&errorMessage()}
     {didRedirect&&performRedirect()}
-            <div class="bg-yellow-500 flex flex-col sm:justify-center items-center bg-gray-100 ">
-                <div class="relative sm:max-w-sm w-full">
-                    <div class="relative w-full rounded-3xl px-4  bg-gray-100 shadow-md">
-                        <label for="" class="block text-sm text-gray-700 text-center font-semibold">
-                            SignIn
+            <div class=" flex flex-col sm:justify-center items-center bg-yellow-500 md:w-96 w-full ">
+                <div  class="relative sm:max-w-sm w-full">
+                    <div style={{background:"#050B21"}} class="relative w-full rounded-3xl px-4  bg-gray-100 shadow-md">
+                        <label for="" class="block text-6xl text-white text-center font-medium">
+                            Login
                         </label>
                         <form method="#" action="#" class="mt-10">
                                            
@@ -88,21 +88,21 @@ const FormSignIn = () => {
                                 <input 
                                 onChange={handleChange("email")}
                                 value={email} 
-                                type="email" placeholder="Email" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />                           
+                                type="email" placeholder="Email" class="mt-1 block w-full border-none bg-white h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />                           
                             </div>
 
                             <div class="mt-7">                
                                 <input
                                 onChange={handleChange("password")}
                                 value={password}
-                                type="password" placeholder="Contraseña" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />                           
+                                type="password" placeholder="Contraseña" class="mt-1 block w-full border-none bg-white h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />                           
                             </div>
 
                             <div class="mt-7 flex">
                                 
                 
                                <div class="w-full text-right">     
-                                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="#">
+                                    <a class="underline text-sm text-white hover:text-gray-900" href="#">
                                        Forgot passowrd
                                     </a>                                  
                                </div>
@@ -116,7 +116,7 @@ const FormSignIn = () => {
                 
                             <div class="flex mt-7 items-center text-center">
                                 <hr class="border-gray-300 border-1 w-full rounded-md" />
-                                <label class="block font-medium text-sm text-gray-700 w-full">
+                                <label class="block font-medium text-sm text-white w-full">
                                     Accede con
                                 </label>
                                 <hr class="border-gray-300 border-1 w-full rounded-md" />

@@ -61,10 +61,10 @@ const errorMessage=()=>{
     <div class="font-sans "> 
     {success?successMessage()&&redirect():false}
     {error?errorMessage():false}
-            <div class=" flex flex-col sm:justify-center items-center bg-gray-100 ">
+            <div class=" flex flex-col sm:justify-center items-center md:w-96 w-full ">
                 <div class="relative sm:max-w-sm w-full">
-                    <div class="relative w-full rounded-3xl px-4  bg-gray-100 shadow-md">
-                        <label for="" class="block text-sm text-gray-700 text-center font-semibold">
+                    <div style={{background:"#050B21"}} class="relative w-full rounded-3xl px-4   shadow-md">
+                        <label for="" class="block text-6xl text-white text-center font-medium">
                             SignUp
                         </label>
                         <form method="#" action="#" class="mt-10">
@@ -73,25 +73,25 @@ const errorMessage=()=>{
                                 <input
                                 value={name}
                                 onChange={handleChange('name')}
-                                type="text" placeholder="UserName" className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />
+                                type="text" placeholder="UserName" className="mt-1 block w-full border-none bg-white h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />
                             </div>
                             <div class="mt-7">                
                                 <input 
                                 value={email}
                                 onChange={handleChange("email")}
-                                type="email" placeholder="Email" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />                           
+                                type="email" placeholder="Email" class="mt-1 block w-full border-none bg-white h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />                           
                             </div>
 
                             <div class="mt-7">                
                                 <input 
                                 value={password}
                                 onChange={handleChange("password")}
-                                type="password" placeholder="Password" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />                           
+                                type="password" placeholder="Password" class="mt-1 block w-full border-none bg-white h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0" />                           
                             </div>
 
                             <div class="mt-7 flex">
                                <div class="w-full text-right">     
-                                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="#">
+                                    <a class="underline text-sm text-white " href="#">
                                        Forgot passowrd
                                     </a>                                  
                                </div>
